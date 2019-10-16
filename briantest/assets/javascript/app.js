@@ -28,13 +28,11 @@ $(document).ready(function () {
             method: "GET"
         })
 
-            .then(function (dick) {
-                console.log(dick);
-                console.log(dick.results[0].urls.full);
-                $("img").attr("src", dick.results[0].urls.full);
+            .then(function (image) {
+                return image.results[0].urls.full;
             }
             )
-        console.log(take);
+
     })
 
 
